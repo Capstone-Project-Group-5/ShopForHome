@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "62ca8b0d864c7c0907fe2c6a"
+  },
+  "shippingInfo": {
+    "address": "#9714, Street No.1,Chander Lok Colony, Basti Jodhewal",
+    "city": "Ludhiana",
+    "state": "PB",
+    "country": "IN",
+    "pinCode": 141007,
+    "phoneNo": {
+      "$numberLong": "8727010002"
+    }
+  },
+  "orderItems": [
+    {
+      "name": "sofa",
+      "price": 10000,
+      "quantity": 1,
+      "image": "https://res.cloudinary.com/chiragbhayana/image/upload/v1657440887/products/qjhjxlbdqmrzum4uuwba.jpg",
+      "product": {
+        "$oid": "62ca89fa190123c674f60f75"
+      },
+      "_id": {
+        "$oid": "62ca8b0d864c7c0907fe2c6b"
+      }
+    }
+  ],
+  "user": {
+    "$oid": "62ca8980190123c674f60f5a"
+  },
+  "paymentInfo": {
+    "id": "pi_3LJvKISAcREKGzoP18c0n4uc",
+    "status": "succeeded"
+  },
+  "paidAt": {
+    "$date": {
+      "$numberLong": "1657441037754"
+    }
+  },
+  "itemPrice": 10000,
+  "taxPrice": 1800,
+  "shippingPrice": 0,
+  "totalPrice": 11800,
+  "orderStatus": "Delivered",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657441037767"
+    }
+  },
+  "__v": 0,
+  "deliveredAt": {
+    "$date": {
+      "$numberLong": "1657441696046"
+    }
+  }
+}]

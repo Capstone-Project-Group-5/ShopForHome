@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "db671328-c16f-4ccf-b8ff-cd8f046f04c7",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13421211"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product -- Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Kite Runner\",\r\n    \"price\":250,\r\n    \"description\":\"By Khaled Hosseini\",\r\n    \"category\":\"Books\",\r\n    \"images\":{\r\n        \"public_id\":\"sample id\",\r\n        \"url\":\"https://images-na.ssl-images-amazon.com/images/I/81IzbD2IiIL.jpg\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/product/new",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"product",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "Mouse",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "gadgets",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "price[gte]",
+									"value": "1200",
+									"disabled": true
+								},
+								{
+									"key": "price[lt]",
+									"value": "2000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product -- Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mouse\",\r\n    \"price\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/product/62540ffe91f089bf6cb10766a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"product",
+								"62540ffe91f089bf6cb10766a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product  -- Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/product/62540ffe91f089bf6cb10766",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"product",
+								"62540ffe91f089bf6cb10766"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product --",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/product/625570174838b3a1484af8e9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"625570174838b3a1484af8e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Products - Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Antar\",\r\n    \"email\":\"antar@gmail.com\",\r\n    \"password\":\"12345678\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"chiragbhayana2k@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password*",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"chiragbhayana2k@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/password/forgot",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"password",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"123456789\",\r\n    \"confirmPassword\":\"123456789\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/password/reset/bd4249bc63380548fc7a17d08cc452685d59880e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"password",
+								"reset",
+								"bd4249bc63380548fc7a17d08cc452685d59880e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create/Update Product Reviews",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\":\"5\",\r\n    \"comment\":\"Good Piece\",\r\n    \"productId\":\"625570174838b3a1484af8e9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/review",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User - Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/user/6256a29c03c0b1f9e10e5407",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"6256a29c03c0b1f9e10e5407"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Chirag Bhayana\",\r\n    \"email\":\"chiragbhayana2k@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/me/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update/Change User Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"123456789\",\r\n    \"newPassword\":\"12345678\",\r\n    \"confirmPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/password/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"password",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Role - Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vipin Bhayana\",\r\n    \"email\": \"vipinbhayana@gmail.com\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/user/625558e6c41f60aa863ab305",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"625558e6c41f60aa863ab305"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users - Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User - Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/user/625558e6c41f60aa863ab305",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"625558e6c41f60aa863ab305"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reviews?id=625570174838b3a1484af8e9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "625570174838b3a1484af8e9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reviews",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reviews?productId=625570174838b3a1484af8e9&id=6256d6ab30c640c021b0f6e9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "625570174838b3a1484af8e9"
+								},
+								{
+									"key": "id",
+									"value": "6256d6ab30c640c021b0f6e9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create New Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemPrice\": 200,\r\n    \"taxPrice\": 36,\r\n    \"shippingPrice\": 100,\r\n    \"totalPrice\": 336,\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": \"625570174838b3a1484af8e9\",\r\n            \"name\": \"Power Bank\",\r\n            \"price\": 2500,\r\n            \"image\": \"Sample Image\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"shippingInfo\": {\r\n        \"address\": \"abc\",\r\n        \"city\": \"Jaipur\",\r\n        \"state\": \"Rajasthan\",\r\n        \"country\": \"India\",\r\n        \"pinCode\": 123231,\r\n        \"phoneNo\": 1234567891\r\n    },\r\n    \"paymentInfo\": {\r\n        \"id\": \"sample Payment Info\",\r\n        \"status\": \"succeeded\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order/new",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/order/6257fb4d9711ef79c2ba992a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"6257fb4d9711ef79c2ba992a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Delivered\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/order/6258005d653786dd6b8d5aff",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"order",
+								"6258005d653786dd6b8d5aff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/admin/order/6257be7f80db0712b9b626da",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"order",
+								"6257be7f80db0712b9b626da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

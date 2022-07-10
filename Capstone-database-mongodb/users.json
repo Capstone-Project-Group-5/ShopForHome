@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "62ca8980190123c674f60f5a"
+  },
+  "name": "Antarpreet Singh",
+  "email": "antarpreetsingh@gmail.com",
+  "password": "$2a$10$hCRCq0DZO96sRZyABaITj.QUS6JvDmd9QQ255eQ/lcJUX1HijweC.",
+  "avatar": {
+    "public_id": "150?img=3",
+    "url": "https://i.pravatar.cc/150?img=4"
+  },
+  "role": "admin",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657440640887"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ca955f8f3022e1d4059377"
+  },
+  "name": "simsim",
+  "email": "sim@gmail.com",
+  "password": "$2a$10$kVOSHk0V77cB0r6BP9XWa.7bFDHb/wEsr1GqbMZa7UFyyQ0aU.dG2",
+  "avatar": {
+    "public_id": "avatars/lpaxdxwotkkcrjjposcp",
+    "url": "https://res.cloudinary.com/chiragbhayana/image/upload/v1657443679/avatars/lpaxdxwotkkcrjjposcp.jpg"
+  },
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657443679211"
+    }
+  },
+  "__v": 0
+}]
