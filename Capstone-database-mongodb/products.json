@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "62ca89fa190123c674f60f75"
+  },
+  "name": "sofa",
+  "description": "sofa set",
+  "price": 10000,
+  "ratings": 0,
+  "images": [
+    {
+      "public_id": "products/qjhjxlbdqmrzum4uuwba",
+      "url": "https://res.cloudinary.com/chiragbhayana/image/upload/v1657440887/products/qjhjxlbdqmrzum4uuwba.jpg",
+      "_id": {
+        "$oid": "62ca8a77864c7c0907fe2c3a"
+      }
+    }
+  ],
+  "category": "Home Decor",
+  "Stock": 2,
+  "numOfReviews": 0,
+  "user": {
+    "$oid": "62ca8980190123c674f60f5a"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657440762890"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ca8fb1ce9d7aa7e18e8836"
+  },
+  "name": "Bedsheet1",
+  "description": "living1",
+  "price": 500,
+  "ratings": 0,
+  "images": [
+    {
+      "public_id": "photo/2015/11/10/14/26/box-1036976_960_720.png",
+      "url": "https://cdn.pixabay.com/photo/2015/11/10/14/26/box-1036976_960_720.png",
+      "_id": {
+        "$oid": "62ca8fb1ce9d7aa7e18e8837"
+      }
+    }
+  ],
+  "category": "home",
+  "Stock": 50,
+  "numOfReviews": 0,
+  "user": {
+    "$oid": "62c86a5c6bc9bd6c1ae0f2d8"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657442225733"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ca8fb1ce9d7aa7e18e8838"
+  },
+  "name": "Sofa set1",
+  "description": "house1",
+  "price": 10000,
+  "ratings": 0,
+  "images": [
+    {
+      "public_id": "photo/2015/11/10/14/26/box-1036976_960_720.png",
+      "url": "https://cdn.pixabay.com/photo/2015/11/10/14/26/box-1036976_960_720.png",
+      "_id": {
+        "$oid": "62ca8fb1ce9d7aa7e18e8839"
+      }
+    }
+  ],
+  "category": "living",
+  "Stock": 10,
+  "numOfReviews": 0,
+  "user": {
+    "$oid": "62c86a5c6bc9bd6c1ae0f2d8"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657442225734"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62caa3708f3022e1d4059390"
+  },
+  "name": "bed",
+  "description": "Awesome bed",
+  "price": 250,
+  "ratings": 0,
+  "images": [],
+  "category": "Living",
+  "Stock": 1,
+  "numOfReviews": 0,
+  "user": {
+    "$oid": "62ca8980190123c674f60f5a"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1657447280993"
+    }
+  },
+  "__v": 0
+}]
